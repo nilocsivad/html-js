@@ -35,11 +35,24 @@
 		overflow:hidden;
 	}
 </style>
+<script type="text/javascript">
+	window.onload = function() {
+		var items = document.getElementById("container").getElementsByTagName("div");
+		for ( var i = 0, l = items.length; l > i; ++i ) {
+			var tagA = items[i].getElementsByTagName("a")[0];
+			var href = tagA.getAttribute("href");
+			tagA.setAttribute("href", (href + "?n=" + Math.random()));
+		}
+	}
+</script>
 </head>
 <body>
 
 	<div id="container">
 		<div class="link-item"><a href="./image-waterfall/1/stream_list.html" title="图片瀑布流">图片瀑布流</a></div>
+		<div class="link-item"><a href="./image-list-item/1/gentlemen_list.html" title="图片列表项">图片列表项</a></div>
+		<div class="link-item"><a href="./image-scroll/1/gentlemen_list.html" title="图片滚动">图片滚动</a></div>
+		<div class="link-item"><a href="./image-auto-scroll/1/auto-scroll.html" title="图片自动滚动">图片自动滚动</a></div>
 	</div>
 
 </body>
